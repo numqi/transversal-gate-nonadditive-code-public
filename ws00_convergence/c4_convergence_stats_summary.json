@@ -1,0 +1,416 @@
+{
+  "experiment": "((6,2,3)) C4 manifold-optimization convergence statistics",
+  "generated_at_utc": "2026-07-22T16:07:20.529740+00:00",
+  "git_commit": "3e180f846d56dde33fe530552e3da171e56ee4d1",
+  "procedure": {
+    "targets_lambda2": [
+      0.6666666666666666,
+      0.8,
+      1.0
+    ],
+    "target_regions": [
+      "lower_boundary",
+      "interior",
+      "upper_boundary"
+    ],
+    "runs_per_target": 100,
+    "base_seed": 2026072200,
+    "seed_formula": "base_seed + 1000 * target_index + run_index",
+    "initialization": "numpy Generator(PCG64), uniform[-1, 1)",
+    "optimizer": "L-BFGS-B via numqi.optimize.minimize/scipy.optimize.minimize",
+    "preliminary_tolerance": 1e-08,
+    "refinement_trigger": 1e-05,
+    "refinement_tolerance": 1e-20,
+    "scientific_success_threshold": 1e-07,
+    "threads_per_process": 1,
+    "execution": "spawn ProcessPoolExecutor (4 workers)"
+  },
+  "environment": {
+    "python": "3.14.4",
+    "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+    "numpy": "2.4.3",
+    "scipy": "1.17.1",
+    "torch": "2.10.0",
+    "numqi": "0.6.1.dev2+g0feab726a",
+    "opt_einsum": "3.4.0"
+  },
+  "completed_rows": 300,
+  "elapsed_this_invocation_s": 497.6700757499784,
+  "estimated_total_collection_wall_s": 566.2353295159784,
+  "estimated_total_collection_wall_note": "For rows completed before the final invocation, this estimate uses the sum of their per-run optimizer wall times; it excludes earlier process startup and checkpoint-I/O overhead. The final parallel invocation is timed directly.",
+  "total_recorded_optimization_time_s": 2006.478305382,
+  "targets": [
+    {
+      "target_lambda2": 0.6666666666666666,
+      "region": "lower_boundary",
+      "runs": 100,
+      "successes": 30,
+      "success_fraction": 0.3,
+      "success_fraction_wilson_95": {
+        "lower": 0.2189488529493276,
+        "upper": 0.3958485463334666
+      },
+      "refined_runs": 30,
+      "final_total_loss": {
+        "min": 2.0062381230130388e-16,
+        "q1": 1.3393424816415655e-14,
+        "median": 0.11062199569341433,
+        "q3": 0.11111192512435186,
+        "iqr": 0.11111192512433847,
+        "max": 0.3126900557593917
+      },
+      "total_iterations": {
+        "min": 76.0,
+        "q1": 108.5,
+        "median": 170.0,
+        "q3": 2505.5,
+        "iqr": 2397.0,
+        "max": 6384.0
+      },
+      "total_function_evaluations": {
+        "min": 81.0,
+        "q1": 113.5,
+        "median": 187.5,
+        "q3": 2583.25,
+        "iqr": 2469.75,
+        "max": 6563.0
+      },
+      "wall_time_s": {
+        "min": 0.217289125,
+        "q1": 0.5911146974999999,
+        "median": 0.9128679375,
+        "q3": 8.0088556125,
+        "iqr": 7.4177409149999995,
+        "max": 30.5499799
+      },
+      "optimizer_successes": 100,
+      "successful_runs": {
+        "runs": 30,
+        "final_total_loss": {
+          "min": 2.0062381230130388e-16,
+          "q1": 3.0047503507249376e-15,
+          "median": 5.762961149376072e-15,
+          "q3": 1.0361740547463129e-14,
+          "iqr": 7.356990196738192e-15,
+          "max": 1.582401980543365e-14
+        },
+        "total_iterations": {
+          "min": 1355.0,
+          "q1": 2768.75,
+          "median": 3630.5,
+          "q3": 4307.25,
+          "iqr": 1538.5,
+          "max": 6384.0
+        },
+        "total_function_evaluations": {
+          "min": 1396.0,
+          "q1": 2849.5,
+          "median": 3733.0,
+          "q3": 4440.5,
+          "iqr": 1591.0,
+          "max": 6563.0
+        },
+        "wall_time_s": {
+          "min": 4.30619404,
+          "q1": 11.235690900000002,
+          "median": 15.3937438,
+          "q3": 19.280317175,
+          "iqr": 8.044626274999999,
+          "max": 30.5499799
+        }
+      },
+      "unsuccessful_runs": {
+        "runs": 70,
+        "final_total_loss": {
+          "min": 0.08850011920265381,
+          "q1": 0.10976035458205391,
+          "median": 0.11111134471936054,
+          "q3": 0.111113001396363,
+          "iqr": 0.0013526468143090914,
+          "max": 0.3126900557593917
+        },
+        "total_iterations": {
+          "min": 76.0,
+          "q1": 100.0,
+          "median": 118.5,
+          "q3": 176.75,
+          "iqr": 76.75,
+          "max": 287.0
+        },
+        "total_function_evaluations": {
+          "min": 81.0,
+          "q1": 106.0,
+          "median": 126.0,
+          "q3": 193.5,
+          "iqr": 87.5,
+          "max": 301.0
+        },
+        "wall_time_s": {
+          "min": 0.217289125,
+          "q1": 0.5019914685,
+          "median": 0.7228142289999999,
+          "q3": 0.9646250832500001,
+          "iqr": 0.4626336147500001,
+          "max": 2.13234679
+        }
+      },
+      "loss_separation": {
+        "largest_successful_loss": 1.582401980543365e-14,
+        "smallest_unsuccessful_loss": 0.08850011920265381
+      }
+    },
+    {
+      "target_lambda2": 0.8,
+      "region": "interior",
+      "runs": 100,
+      "successes": 33,
+      "success_fraction": 0.33,
+      "success_fraction_wilson_95": {
+        "lower": 0.24563122734128034,
+        "upper": 0.4269465620490947
+      },
+      "refined_runs": 33,
+      "final_total_loss": {
+        "min": 8.048653577354453e-17,
+        "q1": 4.75973141638874e-15,
+        "median": 0.04000006029519901,
+        "q3": 0.04000104720822727,
+        "iqr": 0.04000104720822251,
+        "max": 0.3912323648231817
+      },
+      "total_iterations": {
+        "min": 58.0,
+        "q1": 99.5,
+        "median": 156.0,
+        "q3": 2092.0,
+        "iqr": 1992.5,
+        "max": 5160.0
+      },
+      "total_function_evaluations": {
+        "min": 60.0,
+        "q1": 107.25,
+        "median": 172.0,
+        "q3": 2162.0,
+        "iqr": 2054.75,
+        "max": 5317.0
+      },
+      "wall_time_s": {
+        "min": 0.292689959,
+        "q1": 0.5956469585,
+        "median": 1.173091435,
+        "q3": 10.4995028,
+        "iqr": 9.9038558415,
+        "max": 27.2680881
+      },
+      "optimizer_successes": 100,
+      "successful_runs": {
+        "runs": 33,
+        "final_total_loss": {
+          "min": 8.048653577354453e-17,
+          "q1": 5.2989269375433e-16,
+          "median": 1.2336764583808618e-15,
+          "q3": 4.346184181519058e-15,
+          "iqr": 3.816291487764728e-15,
+          "max": 1.3524890213940551e-14
+        },
+        "total_iterations": {
+          "min": 953.0,
+          "q1": 2158.0,
+          "median": 2865.0,
+          "q3": 3439.0,
+          "iqr": 1281.0,
+          "max": 5160.0
+        },
+        "total_function_evaluations": {
+          "min": 987.0,
+          "q1": 2228.0,
+          "median": 2947.0,
+          "q3": 3545.0,
+          "iqr": 1317.0,
+          "max": 5317.0
+        },
+        "wall_time_s": {
+          "min": 6.11838496,
+          "q1": 10.9655267,
+          "median": 15.6951545,
+          "q3": 17.9482519,
+          "iqr": 6.982725199999999,
+          "max": 27.2680881
+        }
+      },
+      "unsuccessful_runs": {
+        "runs": 67,
+        "final_total_loss": {
+          "min": 0.04000002095753588,
+          "q1": 0.04000006029519901,
+          "median": 0.04000027141674546,
+          "q3": 0.04000249087249309,
+          "iqr": 2.4305772940852455e-06,
+          "max": 0.3912323648231817
+        },
+        "total_iterations": {
+          "min": 58.0,
+          "q1": 85.0,
+          "median": 115.0,
+          "q3": 156.0,
+          "iqr": 71.0,
+          "max": 267.0
+        },
+        "total_function_evaluations": {
+          "min": 60.0,
+          "q1": 94.0,
+          "median": 123.0,
+          "q3": 172.0,
+          "iqr": 78.0,
+          "max": 281.0
+        },
+        "wall_time_s": {
+          "min": 0.292689959,
+          "q1": 0.490991854,
+          "median": 0.67614475,
+          "q3": 1.173091435,
+          "iqr": 0.6820995809999999,
+          "max": 2.59226067
+        }
+      },
+      "loss_separation": {
+        "largest_successful_loss": 1.3524890213940551e-14,
+        "smallest_unsuccessful_loss": 0.04000002095753588
+      }
+    },
+    {
+      "target_lambda2": 1.0,
+      "region": "upper_boundary",
+      "runs": 100,
+      "successes": 75,
+      "success_fraction": 0.75,
+      "success_fraction_wilson_95": {
+        "lower": 0.656955364519384,
+        "upper": 0.8245478863771232
+      },
+      "refined_runs": 75,
+      "final_total_loss": {
+        "min": 1.6422372080487816e-18,
+        "q1": 2.5644511402843615e-16,
+        "median": 1.748378265667558e-15,
+        "q3": 0.018503987354567323,
+        "iqr": 0.018503987354567066,
+        "max": 0.233518704513706
+      },
+      "total_iterations": {
+        "min": 72.0,
+        "q1": 465.75,
+        "median": 1225.0,
+        "q3": 2330.25,
+        "iqr": 1864.5,
+        "max": 4729.0
+      },
+      "total_function_evaluations": {
+        "min": 76.0,
+        "q1": 505.0,
+        "median": 1330.0,
+        "q3": 2528.5,
+        "iqr": 2023.5,
+        "max": 5334.0
+      },
+      "wall_time_s": {
+        "min": 0.366583334,
+        "q1": 2.7687574775000003,
+        "median": 7.633933605,
+        "q3": 13.853916975,
+        "iqr": 11.085159497500001,
+        "max": 31.2082568
+      },
+      "optimizer_successes": 100,
+      "successful_runs": {
+        "runs": 75,
+        "final_total_loss": {
+          "min": 1.6422372080487816e-18,
+          "q1": 1.3651240366345677e-16,
+          "median": 6.498634246991948e-16,
+          "q3": 2.7299079212017525e-15,
+          "iqr": 2.5933955175382956e-15,
+          "max": 1.1123330243526035e-13
+        },
+        "total_iterations": {
+          "min": 499.0,
+          "q1": 1100.5,
+          "median": 1596.0,
+          "q3": 2734.5,
+          "iqr": 1634.0,
+          "max": 4729.0
+        },
+        "total_function_evaluations": {
+          "min": 545.0,
+          "q1": 1224.0,
+          "median": 1748.0,
+          "q3": 2855.5,
+          "iqr": 1631.5,
+          "max": 5334.0
+        },
+        "wall_time_s": {
+          "min": 2.79056629,
+          "q1": 6.857904830000001,
+          "median": 10.4577496,
+          "q3": 16.5410332,
+          "iqr": 9.68312837,
+          "max": 31.2082568
+        }
+      },
+      "unsuccessful_runs": {
+        "runs": 25,
+        "final_total_loss": {
+          "min": 0.07401594941793559,
+          "q1": 0.07401598293089795,
+          "median": 0.16970786023282639,
+          "q3": 0.19800772499795702,
+          "iqr": 0.12399174206705907,
+          "max": 0.233518704513706
+        },
+        "total_iterations": {
+          "min": 72.0,
+          "q1": 88.0,
+          "median": 114.0,
+          "q3": 198.0,
+          "iqr": 110.0,
+          "max": 366.0
+        },
+        "total_function_evaluations": {
+          "min": 76.0,
+          "q1": 95.0,
+          "median": 123.0,
+          "q3": 207.0,
+          "iqr": 112.0,
+          "max": 385.0
+        },
+        "wall_time_s": {
+          "min": 0.366583334,
+          "q1": 0.527017583,
+          "median": 0.788858833,
+          "q3": 1.21556754,
+          "iqr": 0.6885499569999999,
+          "max": 2.70333104
+        }
+      },
+      "loss_separation": {
+        "largest_successful_loss": 1.1123330243526035e-13,
+        "smallest_unsuccessful_loss": 0.07401594941793559
+      }
+    }
+  ],
+  "validation": {
+    "expected_rows": 300,
+    "unique_target_run_keys": 300,
+    "all_losses_finite_nonnegative": true,
+    "all_success_flags_recomputed": true,
+    "all_run_indices_complete": true,
+    "all_seeds_match_formula": true
+  },
+  "limitations": [
+    "These are empirical success frequencies for one deterministic set of 100 random initializations per target, not probabilities with a known sampling distribution over all possible initializations.",
+    "The three targets test the lower boundary, one interior point, and the upper boundary of the analytically realized interval; they do not characterize every target in the interval.",
+    "Optimizer termination status and scientific success are different: scientific success is determined only by final total loss < 1e-7.",
+    "A failure to reach the threshold is an optimization non-finding, not evidence that a code does not exist.",
+    "Per-run wall times are hardware- and load-dependent. The first 18 lower-boundary runs were collected sequentially before the resumable experiment switched to four workers; iteration and evaluation counts are more comparable across targets than elapsed seconds."
+  ]
+}
